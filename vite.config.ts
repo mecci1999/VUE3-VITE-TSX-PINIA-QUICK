@@ -1,8 +1,16 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-import eslint from '@rollup/plugin-eslint';
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [eslint({ fix: true }), vue(), vueJsx()],
+  plugins: [vue(), vueJsx()],
+  server: {
+    host: '0.0.0.0',
+    port: 8000, // 设置服务启动端口号
+    open: false, // 设置服务启动时是否自动打开浏览器
+    cors: true, // 允许跨域
+    hmr: true,
+    // usePolling: true,
+    // 设置代理，根据项目实际情况配置
+  },
 });

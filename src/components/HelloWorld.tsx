@@ -23,7 +23,7 @@ const HelloWorld = defineComponent({
     });
     return () => (
       <div class="app">
-        <h2>这是子组件</h2>
+        <h2>这</h2>
         <div>props：{props.msg}</div>
         <div>计数：{count.value}</div>
         <button onClick={handleClick}>+1</button>
